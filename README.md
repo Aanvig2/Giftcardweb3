@@ -1,3 +1,38 @@
+# Walmart Retail Fraud Prevention Suite
+
+This project is a **multi-layered fraud detection platform** developed for the **Walmart Sparkathon**, designed to secure key aspects of retail through AI, blockchain, and cybersecurity.
+
+## Solution Overview
+
+### Gift Card Fraud Detection (NFT + Smart Contracts)
+Gift cards are minted as **ERC-721 NFTs**, cryptographically tied to user wallets. 
+Only authorized wallets can redeem via **MetaMask signature verification**.  
+Built with **Next.js**, **Express.js**, and **Solidity**, deployed locally using **Hardhat**.
+
+### Return Fraud Detection (Graph + ML)
+Detects fraudulent return requests using:
+- **Node2Vec graph embeddings**
+- **XGBoost classifier**
+- **FAISS similarity search**
+- Robustness via **hybrid adversarial defense techniques**
+
+### QRDetect: Anti-Counterfeit QR Toolkit
+A Python-based framework for generating **tamper-sensitive QR codes** using:
+- **HMAC-SHA256 signatures**
+- **XOR obfuscation**
+- **Mask pattern locking**
+- **Low EC level** for edit sensitivity  
+Ideal for supply chain validation, product authentication, and secure labeling.
+
+## Why It Matters
+Each module addresses a major retail vulnerability:
+- Wallet-authenticated gift card usage
+- AI-driven return fraud detection
+- Tamper-proof QR code verification
+
+Together, these create a unified, **modular platform to prevent fraud**, build trust, and protect customers.
+
+
 ## Gift Card Fraud Detection
 This project can be run locally on a locally deployed blockchain using Hardhat (https://hardhat.org/) and using the free ETH loaded accounts it provides.
 
@@ -136,8 +171,6 @@ Note - This value cannot be more than what is stored in your giftcard
 - `npm run start` - Start production server
 - 
 #  Return Fraud Detection System 
-
-This project is an advanced fraud detection pipeline focused on identifying return frauds using tabular data, graph embeddings, and hybrid scoring. It is deployed via a Streamlit dashboard and leverages cutting-edge tools like FAISS, Node2Vec, XGBoost, and optional LLM-based explanations using Ollama.
 
 ## Project Structure
 
